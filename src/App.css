@@ -1,0 +1,1369 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f3ee;
+  color: #1f2933;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 0;
+  background: #f6f3ee;
+}
+
+/* 상단 기업/쇼핑몰 메인 배너 */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 72px 8%;
+  background: linear-gradient(135deg, #ffffff 0%, #f1ebe2 100%);
+  border-bottom: 1px solid #e5ded4;
+}
+
+.mini {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ebe3d7;
+  color: #7a5c3e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #1f2933;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 18px 0 0;
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.today-card {
+  min-width: 260px;
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e6ded2;
+  box-shadow: 0 18px 45px rgba(80, 65, 48, 0.08);
+}
+
+.today-card span {
+  display: block;
+  color: #8b735b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.today-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 28px;
+  color: #1f2933;
+}
+
+.today-card p {
+  margin: 10px 0 0;
+  color: #64748b;
+}
+
+/* 선택 화면 */
+.select-page {
+  padding: 54px 8%;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: #1f2933;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* 쇼핑몰 상품 카드 느낌 */
+.character-card {
+  min-height: 340px;
+  padding: 28px;
+  border: 1px solid #e7dfd4;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #1f2933;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 16px 36px rgba(90, 74, 52, 0.08);
+  transition: 0.2s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 52px rgba(90, 74, 52, 0.13);
+  border-color: #c7aa85;
+}
+
+.character-emoji {
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 22px;
+  background: #f4eee6;
+  font-size: 42px;
+}
+
+.character-card h3 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.character-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #8b5e34;
+  font-size: 15px;
+}
+
+.character-card p {
+  margin-top: 16px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.mini-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.mini-stats span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #f4eee6;
+  color: #7a5c3e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 메인 레이아웃 */
+.life-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 1.5fr;
+  gap: 24px;
+  padding: 54px 8%;
+}
+
+.panel {
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e7dfd4;
+  box-shadow: 0 16px 40px rgba(90, 74, 52, 0.08);
+}
+
+.panel h2 {
+  margin: 0 0 22px;
+  font-size: 23px;
+  color: #1f2933;
+}
+
+/* 프로필 */
+.profile {
+  text-align: center;
+}
+
+.profile-emoji {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 28px;
+  background: #f4eee6;
+  font-size: 50px;
+}
+
+.profile h2 {
+  margin-bottom: 8px;
+}
+
+.profile p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.score-box {
+  margin: 26px 0;
+  padding: 22px;
+  border-radius: 20px;
+  background: #f8f5f0;
+  border: 1px solid #e7dfd4;
+}
+
+.score-box span {
+  color: #8b735b;
+  font-weight: 700;
+}
+
+.score-box strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 46px;
+  color: #1f2933;
+}
+
+.reset {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  background: #1f2933;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* 상태 바 */
+.stat {
+  margin-bottom: 21px;
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  font-weight: 700;
+}
+
+.stat-top span {
+  color: #374151;
+}
+
+.stat-top strong {
+  color: #8b5e34;
+}
+
+.stat-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: #eee7dd;
+  overflow: hidden;
+}
+
+.stat-bar div {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #b08968, #d6ad7b);
+  transition: width 0.3s ease;
+}
+
+/* 일정 선택 - 서비스 카드 느낌 */
+.schedule {
+  grid-row: span 2;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.schedule-grid button {
+  min-height: 145px;
+  padding: 20px;
+  border: 1px solid #e7dfd4;
+  border-radius: 20px;
+  background: #fbfaf8;
+  color: #1f2933;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.18s ease;
+}
+
+.schedule-grid button:hover {
+  background: #f4eee6;
+  transform: translateY(-4px);
+  border-color: #c7aa85;
+}
+
+.schedule-grid span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.schedule-grid strong {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.schedule-grid small {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* 목표 */
+.goal-list {
+  display: grid;
+  gap: 12px;
+}
+
+.goal-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e7dfd4;
+  border-radius: 16px;
+  background: #fbfaf8;
+  color: #1f2933;
+  cursor: pointer;
+  text-align: left;
+}
+
+.goal-item span {
+  color: #8b5e34;
+  font-weight: 700;
+}
+
+.goal-item.done {
+  background: #edf7ed;
+  border-color: #b8d8b8;
+}
+
+/* 이벤트 */
+.event-card {
+  padding: 26px;
+  border-radius: 20px;
+  background: #f8f5f0;
+  border: 1px solid #e7dfd4;
+  text-align: center;
+}
+
+.event-card div {
+  font-size: 38px;
+}
+
+.event-card h3 {
+  margin: 12px 0 8px;
+}
+
+.event-card p {
+  color: #64748b;
+}
+
+.ending {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #fff1f0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+/* 다이어리 */
+.diary {
+  grid-column: 2 / 4;
+}
+
+.diary-list {
+  max-height: 250px;
+  overflow-y: auto;
+  display: grid;
+  gap: 12px;
+  padding-right: 6px;
+}
+
+.diary-list p {
+  margin: 0;
+  padding: 15px 17px;
+  border-radius: 16px;
+  background: #fbfaf8;
+  border: 1px solid #eee7dd;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* 요약 */
+.summary {
+  grid-column: 1 / 4;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge-list span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #edf7ed;
+  color: #26734d;
+  font-weight: 700;
+}
+
+.goal-detail {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #f8f5f0;
+  border: 1px solid #e7dfd4;
+}
+
+.goal-detail p {
+  margin-bottom: 0;
+  color: #64748b;
+}
+
+.empty {
+  color: #64748b;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .character-grid,
+  .life-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .diary,
+  .summary,
+  .schedule {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .top,
+  .select-page,
+  .life-layout {
+    padding: 32px 20px;
+  }
+
+  .top h1 {
+    font-size: 36px;
+  }
+
+  .character-grid,
+  .life-layout,
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .today-card {
+    width: 100%;
+  }
+}
+
+/* ================================
+   직업별 테마
+================================ */
+
+/* 대학생 - 캠퍼스 */
+.app.theme-student {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(191, 219, 254, 0.8), transparent 28%),
+    radial-gradient(circle at 90% 80%, rgba(220, 252, 231, 0.8), transparent 30%),
+    #f0f9ff;
+}
+
+.theme-student .top,
+.theme-student .panel {
+  background: #ffffff;
+  border-color: #bfdbfe;
+}
+
+.theme-student .stat-bar div,
+.theme-student .reset {
+  background: linear-gradient(90deg, #3b82f6, #22c55e);
+}
+
+.theme-student .profile-emoji {
+  background: #dbeafe;
+}
+
+/* 직장인 - 모던 오피스 */
+.app.theme-office {
+  background:
+    linear-gradient(135deg, #f8fafc 0%, #e5e7eb 100%);
+}
+
+.theme-office .top,
+.theme-office .panel {
+  background: #ffffff;
+  border-color: #d1d5db;
+}
+
+.theme-office .stat-bar div,
+.theme-office .reset {
+  background: linear-gradient(90deg, #334155, #64748b);
+}
+
+.theme-office .profile-emoji {
+  background: #e5e7eb;
+}
+
+/* 개발자 - 다크 테크 */
+.app.theme-developer {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 197, 94, 0.22), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(59, 130, 246, 0.2), transparent 28%),
+    #0f172a;
+  color: #e5e7eb;
+}
+
+.theme-developer .top,
+.theme-developer .panel,
+.theme-developer .today-card {
+  background: #111827;
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
+.theme-developer .intro,
+.theme-developer .profile p,
+.theme-developer .event-card p,
+.theme-developer .diary-list p,
+.theme-developer .empty {
+  color: #9ca3af;
+}
+
+.theme-developer .panel h2,
+.theme-developer .top h1,
+.theme-developer .character-card h3 {
+  color: #f8fafc;
+}
+
+.theme-developer .score-box,
+.theme-developer .event-card,
+.theme-developer .goal-detail,
+.theme-developer .diary-list p,
+.theme-developer .schedule-grid button,
+.theme-developer .goal-item {
+  background: #0f172a;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.theme-developer .stat-bar {
+  background: #1f2937;
+}
+
+.theme-developer .stat-bar div,
+.theme-developer .reset {
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+}
+
+.theme-developer .profile-emoji {
+  background: #052e16;
+}
+
+/* 디자이너 - 감각적인 파스텔 */
+.app.theme-designer {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(251, 207, 232, 0.9), transparent 30%),
+    radial-gradient(circle at 85% 20%, rgba(221, 214, 254, 0.85), transparent 32%),
+    #fff1f2;
+}
+
+.theme-designer .top,
+.theme-designer .panel {
+  background: #fffafa;
+  border-color: #f9a8d4;
+}
+
+.theme-designer .stat-bar div,
+.theme-designer .reset {
+  background: linear-gradient(90deg, #ec4899, #a78bfa);
+}
+
+.theme-designer .profile-emoji {
+  background: #fce7f3;
+}
+
+/* 크리에이터 - 영상/콘텐츠 */
+.app.theme-creator {
+  background:
+    radial-gradient(circle at top left, rgba(253, 186, 116, 0.9), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.75), transparent 30%),
+    #fff7ed;
+}
+
+.theme-creator .top,
+.theme-creator .panel {
+  background: #fffaf5;
+  border-color: #fed7aa;
+}
+
+.theme-creator .stat-bar div,
+.theme-creator .reset {
+  background: linear-gradient(90deg, #f97316, #fb7185);
+}
+
+.theme-creator .profile-emoji {
+  background: #ffedd5;
+}
+
+/* 창업가 - 프리미엄 비즈니스 */
+.app.theme-startup {
+  background:
+    linear-gradient(135deg, #111827 0%, #312e81 100%);
+  color: #f8fafc;
+}
+
+.theme-startup .top,
+.theme-startup .panel,
+.theme-startup .today-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111827;
+  border-color: #c7d2fe;
+}
+
+.theme-startup .stat-bar div,
+.theme-startup .reset {
+  background: linear-gradient(90deg, #4f46e5, #f59e0b);
+}
+
+.theme-startup .profile-emoji {
+  background: #e0e7ff;
+}
+
+/* 셰프 - 레스토랑 */
+.app.theme-chef {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(254, 202, 202, 0.75), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(254, 243, 199, 0.8), transparent 30%),
+    #fff7ed;
+}
+
+.theme-chef .top,
+.theme-chef .panel {
+  background: #fffaf0;
+  border-color: #facc15;
+}
+
+.theme-chef .stat-bar div,
+.theme-chef .reset {
+  background: linear-gradient(90deg, #dc2626, #f59e0b);
+}
+
+.theme-chef .profile-emoji {
+  background: #fee2e2;
+}
+
+/* 의사 - 메디컬 */
+.app.theme-doctor {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(204, 251, 241, 0.9), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(219, 234, 254, 0.9), transparent 30%),
+    #ecfeff;
+}
+
+.theme-doctor .top,
+.theme-doctor .panel {
+  background: #ffffff;
+  border-color: #99f6e4;
+}
+
+.theme-doctor .stat-bar div,
+.theme-doctor .reset {
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+}
+
+.theme-doctor .profile-emoji {
+  background: #ccfbf1;
+}
+
+/* 교사 - 따뜻한 교실 */
+.app.theme-teacher {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(254, 240, 138, 0.75), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(187, 247, 208, 0.8), transparent 30%),
+    #fefce8;
+}
+
+.theme-teacher .top,
+.theme-teacher .panel {
+  background: #fffef5;
+  border-color: #fde68a;
+}
+
+.theme-teacher .stat-bar div,
+.theme-teacher .reset {
+  background: linear-gradient(90deg, #ca8a04, #22c55e);
+}
+
+.theme-teacher .profile-emoji {
+  background: #fef3c7;
+}
+
+/* 뮤지션 - 무대 */
+.app.theme-musician {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(216, 180, 254, 0.7), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.65), transparent 30%),
+    #2e1065;
+  color: #f8fafc;
+}
+
+.theme-musician .top,
+.theme-musician .panel,
+.theme-musician .today-card {
+  background: rgba(255, 255, 255, 0.94);
+  color: #2e1065;
+  border-color: #d8b4fe;
+}
+
+.theme-musician .stat-bar div,
+.theme-musician .reset {
+  background: linear-gradient(90deg, #9333ea, #ec4899);
+}
+
+.theme-musician .profile-emoji {
+  background: #f3e8ff;
+}
+
+/* 운동선수 - 스포츠 */
+.app.theme-athlete {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(187, 247, 208, 0.9), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(254, 215, 170, 0.75), transparent 30%),
+    #f0fdf4;
+}
+
+.theme-athlete .top,
+.theme-athlete .panel {
+  background: #ffffff;
+  border-color: #86efac;
+}
+
+.theme-athlete .stat-bar div,
+.theme-athlete .reset {
+  background: linear-gradient(90deg, #16a34a, #f97316);
+}
+
+.theme-athlete .profile-emoji {
+  background: #dcfce7;
+}
+
+/* 여행가 - 트래블 */
+.app.theme-traveler {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(186, 230, 253, 0.9), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(253, 230, 138, 0.8), transparent 30%),
+    #f0f9ff;
+}
+
+.theme-traveler .top,
+.theme-traveler .panel {
+  background: #ffffff;
+  border-color: #bae6fd;
+}
+
+.theme-traveler .stat-bar div,
+.theme-traveler .reset {
+  background: linear-gradient(90deg, #0ea5e9, #facc15);
+}
+
+.theme-traveler .profile-emoji {
+  background: #e0f2fe;
+}
+
+/* ================================
+   직업별 이미지형 비주얼 배너
+================================ */
+
+.visual-banner {
+  position: relative;
+  height: 170px;
+  margin: -30px -30px 24px;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.visual-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+.profile-emoji {
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 48px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* 대학생 - 캠퍼스 */
+.visual-campus .visual-banner {
+  background:
+    linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+    repeating-linear-gradient(
+      90deg,
+      #dbeafe 0 40px,
+      #bfdbfe 40px 80px
+    );
+}
+
+.visual-campus .visual-banner::before {
+  content: "📚  🏫  ✏️";
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 38px;
+  letter-spacing: 16px;
+}
+
+/* 직장인 - 오피스 빌딩 */
+.visual-office .visual-banner {
+  background:
+    linear-gradient(135deg, #e5e7eb, #ffffff);
+}
+
+.visual-office .visual-banner::before {
+  content: "";
+  position: absolute;
+  inset: 28px 34px;
+  background:
+    linear-gradient(#cbd5e1 0 0) 0 0 / 42px 52px,
+    linear-gradient(#94a3b8 0 0) 52px 0 / 42px 52px,
+    linear-gradient(#cbd5e1 0 0) 104px 0 / 42px 52px;
+  background-repeat: repeat;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+
+/* 개발자 - 코드 에디터 */
+.visual-code .visual-banner {
+  background: #111827;
+}
+
+.visual-code .visual-banner::before {
+  content: "<div>\A  const life = 'debugging';\A  return success;\A</div>";
+  white-space: pre;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #22c55e;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.visual-code .visual-banner::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+/* 디자이너 - 디자인 캔버스 */
+.visual-design .visual-banner {
+  background:
+    radial-gradient(circle at 20% 35%, #f9a8d4 0 28px, transparent 29px),
+    radial-gradient(circle at 70% 30%, #c4b5fd 0 34px, transparent 35px),
+    radial-gradient(circle at 55% 75%, #fde68a 0 26px, transparent 27px),
+    #fff1f2;
+}
+
+.visual-design .visual-banner::before {
+  content: "Aa";
+  position: absolute;
+  left: 28px;
+  bottom: 34px;
+  font-size: 48px;
+  font-weight: 900;
+  color: #831843;
+}
+
+/* 크리에이터 - 촬영 스튜디오 */
+.visual-studio .visual-banner {
+  background:
+    radial-gradient(circle at 50% 20%, #facc15 0 22px, transparent 23px),
+    linear-gradient(135deg, #fb923c, #fb7185);
+}
+
+.visual-studio .visual-banner::before {
+  content: "▶";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #f97316;
+  font-size: 42px;
+}
+
+/* 창업가 - 프리미엄 비즈니스 */
+.visual-business .visual-banner {
+  background:
+    linear-gradient(135deg, #111827, #312e81);
+}
+
+.visual-business .visual-banner::before {
+  content: "GROWTH";
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  color: rgba(255,255,255,0.85);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.visual-business .visual-banner::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 32px;
+  width: 150px;
+  height: 80px;
+  background:
+    linear-gradient(to top, #f59e0b 0 35%, transparent 35%),
+    linear-gradient(to top, #6366f1 0 55%, transparent 55%),
+    linear-gradient(to top, #22c55e 0 78%, transparent 78%);
+  background-size: 40px 100%;
+  background-position: 0 0, 55px 0, 110px 0;
+  background-repeat: no-repeat;
+}
+
+/* 셰프 - 주방 */
+.visual-kitchen .visual-banner {
+  background:
+    linear-gradient(90deg, #fff7ed 0 50%, #fee2e2 50% 100%);
+}
+
+.visual-kitchen .visual-banner::before {
+  content: "🍳  🥘  🔪";
+  position: absolute;
+  top: 38px;
+  left: 28px;
+  font-size: 42px;
+  letter-spacing: 16px;
+}
+
+.visual-kitchen .visual-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  left: 28px;
+  right: 28px;
+  height: 18px;
+  border-radius: 999px;
+  background: #92400e;
+}
+
+/* 의사 - 병원 */
+.visual-medical .visual-banner {
+  background:
+    linear-gradient(135deg, #ecfeff, #dbeafe);
+}
+
+.visual-medical .visual-banner::before {
+  content: "+";
+  position: absolute;
+  top: 22px;
+  right: 34px;
+  font-size: 86px;
+  color: #14b8a6;
+  font-weight: 900;
+}
+
+.visual-medical .visual-banner::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  bottom: 42px;
+  width: 180px;
+  height: 42px;
+  background:
+    linear-gradient(90deg, transparent 0 15%, #0ea5e9 15% 18%, transparent 18% 26%, #0ea5e9 26% 31%, transparent 31% 40%, #0ea5e9 40% 52%, transparent 52%);
+  border-bottom: 4px solid #0ea5e9;
+}
+
+/* 교사 - 교실 칠판 */
+.visual-classroom .visual-banner {
+  background: #166534;
+}
+
+.visual-classroom .visual-banner::before {
+  content: "TODAY\A1. Learn\A2. Practice\A3. Grow";
+  white-space: pre;
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  color: #fef9c3;
+  font-size: 17px;
+  line-height: 1.7;
+  font-family: Georgia, serif;
+}
+
+.visual-classroom .visual-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 24px;
+  left: 26px;
+  width: 120px;
+  height: 8px;
+  background: #fef3c7;
+  border-radius: 999px;
+}
+
+/* 뮤지션 - 무대 */
+.visual-stage .visual-banner {
+  background:
+    radial-gradient(circle at 25% 10%, rgba(236,72,153,0.9), transparent 26%),
+    radial-gradient(circle at 75% 10%, rgba(147,51,234,0.9), transparent 26%),
+    #2e1065;
+}
+
+.visual-stage .visual-banner::before {
+  content: "♪ ♫ ♪";
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  color: white;
+  font-size: 42px;
+  letter-spacing: 14px;
+}
+
+.visual-stage .visual-banner::after {
+  content: "";
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  bottom: 30px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+}
+
+/* 운동선수 - 축구장/필드 */
+.visual-sports .visual-banner {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px),
+    linear-gradient(#22c55e 0 50%, #16a34a 50% 100%);
+  background-size: 42px 100%, 100% 40px;
+}
+
+.visual-sports .visual-banner::before {
+  content: "";
+  position: absolute;
+  inset: 22px 34px;
+  border: 3px solid rgba(255,255,255,0.85);
+  border-radius: 12px;
+}
+
+.visual-sports .visual-banner::after {
+  content: "⚽";
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+}
+
+/* 여행가 - 여행 포스터 */
+.visual-travel .visual-banner {
+  background:
+    linear-gradient(to bottom, #7dd3fc 0 48%, #fde68a 48% 64%, #38bdf8 64% 100%);
+}
+
+.visual-travel .visual-banner::before {
+  content: "✈️";
+  position: absolute;
+  top: 26px;
+  right: 38px;
+  font-size: 42px;
+}
+
+.visual-travel .visual-banner::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: 48px;
+  width: 120px;
+  height: 70px;
+  background:
+    linear-gradient(135deg, transparent 50%, #16a34a 51%),
+    linear-gradient(45deg, transparent 50%, #15803d 51%);
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: 0 0, 52px 0;
+}
+
+.visual-banner {
+  position: relative;
+  height: 170px;
+  margin: -30px -30px 24px;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.visual-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 18px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35));
+}
+
+.visual-campus .visual-banner {
+  background:
+    linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)),
+    repeating-linear-gradient(90deg, #dbeafe 0 40px, #bfdbfe 40px 80px);
+}
+
+.visual-campus .visual-banner::before {
+  content: "📚  🏫  ✏️";
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 38px;
+  letter-spacing: 16px;
+}
+
+.visual-office .visual-banner {
+  background: linear-gradient(135deg, #e5e7eb, #ffffff);
+}
+
+.visual-office .visual-banner::before {
+  content: "";
+  position: absolute;
+  inset: 28px 34px;
+  background:
+    linear-gradient(#cbd5e1 0 0) 0 0 / 42px 52px,
+    linear-gradient(#94a3b8 0 0) 52px 0 / 42px 52px,
+    linear-gradient(#cbd5e1 0 0) 104px 0 / 42px 52px;
+  background-repeat: repeat;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+
+.visual-code .visual-banner {
+  background: #111827;
+}
+
+.visual-code .visual-banner::before {
+  content: "<div>\A  const life = 'debugging';\A  return success;\A</div>";
+  white-space: pre;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #22c55e;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.visual-design .visual-banner {
+  background:
+    radial-gradient(circle at 20% 35%, #f9a8d4 0 28px, transparent 29px),
+    radial-gradient(circle at 70% 30%, #c4b5fd 0 34px, transparent 35px),
+    radial-gradient(circle at 55% 75%, #fde68a 0 26px, transparent 27px),
+    #fff1f2;
+}
+
+.visual-studio .visual-banner {
+  background:
+    radial-gradient(circle at 50% 20%, #facc15 0 22px, transparent 23px),
+    linear-gradient(135deg, #fb923c, #fb7185);
+}
+
+.visual-studio .visual-banner::before {
+  content: "▶";
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  display: grid;
+  place-items: center;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: #f97316;
+  font-size: 42px;
+}
+
+.visual-business .visual-banner {
+  background: linear-gradient(135deg, #111827, #312e81);
+}
+
+.visual-business .visual-banner::before {
+  content: "GROWTH";
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  color: rgba(255,255,255,0.85);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.visual-kitchen .visual-banner {
+  background: linear-gradient(90deg, #fff7ed 0 50%, #fee2e2 50% 100%);
+}
+
+.visual-kitchen .visual-banner::before {
+  content: "🍳  🥘  🔪";
+  position: absolute;
+  top: 38px;
+  left: 28px;
+  font-size: 42px;
+  letter-spacing: 16px;
+}
+
+.visual-medical .visual-banner {
+  background: linear-gradient(135deg, #ecfeff, #dbeafe);
+}
+
+.visual-medical .visual-banner::before {
+  content: "+";
+  position: absolute;
+  top: 22px;
+  right: 34px;
+  font-size: 86px;
+  color: #14b8a6;
+  font-weight: 900;
+}
+
+.visual-classroom .visual-banner {
+  background: #166534;
+}
+
+.visual-classroom .visual-banner::before {
+  content: "TODAY\A1. Learn\A2. Practice\A3. Grow";
+  white-space: pre;
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  color: #fef9c3;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.visual-stage .visual-banner {
+  background:
+    radial-gradient(circle at 25% 10%, rgba(236,72,153,0.9), transparent 26%),
+    radial-gradient(circle at 75% 10%, rgba(147,51,234,0.9), transparent 26%),
+    #2e1065;
+}
+
+.visual-stage .visual-banner::before {
+  content: "♪ ♫ ♪";
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  color: white;
+  font-size: 42px;
+  letter-spacing: 14px;
+}
+
+.visual-sports .visual-banner {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px),
+    linear-gradient(#22c55e 0 50%, #16a34a 50% 100%);
+  background-size: 42px 100%, 100% 40px;
+}
+
+.visual-sports .visual-banner::before {
+  content: "";
+  position: absolute;
+  inset: 22px 34px;
+  border: 3px solid rgba(255,255,255,0.85);
+  border-radius: 12px;
+}
+
+.visual-sports .visual-banner::after {
+  content: "⚽";
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+}
+
+.visual-travel .visual-banner {
+  background:
+    linear-gradient(to bottom, #7dd3fc 0 48%, #fde68a 48% 64%, #38bdf8 64% 100%);
+}
+
+.visual-travel .visual-banner::before {
+  content: "✈️";
+  position: absolute;
+  top: 26px;
+  right: 38px;
+  font-size: 42px;
+}
+
+.schedule-grid button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
